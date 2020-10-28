@@ -9,9 +9,9 @@ import java.util.*
 
 @Entity
 @Table(name = "vocabulario")
-data class vocabulario(val id:Long = 0, val ref:String = "", val name:String = "", val url:String = "", 
+data class vocabulario(val ref:String = "", val name:String = "", val url:String = "", 
                        val version:String = "",  val description:String = "", val status:String = "") {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    var idd:Long = 0
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    var id:Long = 0
 }
