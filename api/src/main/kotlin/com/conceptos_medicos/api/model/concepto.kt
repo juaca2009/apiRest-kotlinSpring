@@ -9,9 +9,9 @@ import java.util.*
 
 @Entity
 @Table(name = "concepto")
-data class concepto(val idcode:Long = 0, val pxordx:String = "", val oldpxordx:String = "", val codetype:String = "", val concep_class_id:String = "", val concep_if:String = "", val vocabulary_id:String = "", val domain_id:String = "", val track:String = "", val standar_concept:String = "", 
-                    val code:String = "", val code_periord:String = "", val code_scheme:String = "", val long_desc:String = "", val short_desc:String = "", val cade_status:String = "", val code_change:String = "", val code_change_year:String = "", val code_planned_type:String = "", 
-                    val code_billing:String = "", val code_cms:String = "", val sex:String = "", val anat_or_cond:String = "", val poa_code_status:String = "", val poa_code_change:String = "", val poa_code_change_year:String = "", val valid_start_date:String = "", val valid_end_date:String = "", val invalid_reason:String = "", val create_dt:String = "") {
+data class concepto(val idCODE:Long = 0, val PXORDX:String = "", val OLDPXORDX:String = "", val CODETYPE:String = "", val CONCEPT_CLASS_ID:String = "", val CONCEPT_ID:String = "", val VOCABULARY_ID:String = "", val DOMAIN_ID:String = "", val TRACK:String = "", val STANDARD_CONCEPT:String = "", 
+                    val CODE:String = "", val CODEWITHPERIODS:String = "", val CODESCHEME:String = "", val LONG_DESC:String = "", val SHORT_DESC:String = "", val CODE_STATUS:String = "", val CODE_CHANGE:String = "", val CODE_CHANGE_YEAR:String = "", val CODE_PLANNED_TYPE:String = "", 
+                    val CODE_BILLING_STATUS:String = "", val CODE_CMS_CLAIM_STATUS:String = "", val SEX_CD:String = "", val ANAT_OR_COND:String = "", val  POA_CODE_STATUS:String = "", val POA_CODE_CHANGE:String = "", val POA_CODE_CHANGE_YEAR:String = "", val VALID_START_DATE:String = "", val VALID_END_DATE:String = "", val INVALID_REASON:String = "", val CREATE_DT:String = "") {
     @Id
     @GeneratedValue(Strategy = GenerationType.AUTO)
     var idd:Long = 0
