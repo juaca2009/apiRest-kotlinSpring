@@ -66,4 +66,15 @@ class vocabularioController {
             ResponseEntity(HttpStatus.NOT_FOUND)
         }
     }
+
+    @PutMapping("")
+    fun actualizar_vocabulario(@RequestBody voca: vocabulario): ResponseEntity<Any>{
+        return try {
+            vocabularioBusiness!!.guardar_vocabulario(voca)
+            ResponseEntity(HttpStatus.OK)
+        }
+        catch(e: businessException) {
+            ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR)
+        }
+    }
 }

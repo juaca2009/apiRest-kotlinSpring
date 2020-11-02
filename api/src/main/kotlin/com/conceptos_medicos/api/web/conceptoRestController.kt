@@ -67,4 +67,15 @@ class conceptoController {
         }
     }
 
+    @PutMapping("")
+    fun actualizar_concepto(@RequestBody concep: concepto): ResponseEntity<Any>{
+        return try {
+            conceptoBusiness!!.guardar_concepto(concep)
+            ResponseEntity(HttpStatus.OK)
+        }
+        catch(e: businessException) {
+            ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR)
+        }
+    }
+
 }
